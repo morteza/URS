@@ -1,0 +1,21 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> secure $version
+#    - play -> cobertura 2.5
+#    - play -> messages 1.3
+    - jdom 1.1.1
+    - jpaul 2.5.1
+    - owlapi 3.3
+    - HermiT 1.3.6
+
+repositories: 
+    - provided: 
+       type:       local 
+       artifact:   "${application.path}/lib/[module]-[revision].jar" 
+       contains: 
+         - owlapi -> *
+         - HermiT -> *
+         - jpaul -> *
+         - jdom -> *

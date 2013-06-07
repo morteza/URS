@@ -1,0 +1,378 @@
+.ribbon {
+  background-color: #a00;
+  overflow: hidden;
+    position: absolute;
+  left: -3em;
+  top: 2.5em;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+    -moz-box-shadow: 0 0 1em #888;
+  -webkit-box-shadow: 0 0 1em #888;
+}
+
+.ribbon a {
+  border: 1px solid #faa;
+  color: #fff;
+  display: block;
+  margin: 0.05em 0;
+  padding: 0.5em 3.5em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 0.5em #444;
+}
+
+.rtl-input {
+	direction:rtl;
+}
+
+.ltr-input {
+	direction:ltr;
+}
+
+.upload_file_container{
+   width:100px;
+   position:relative;
+}
+
+.upload_file_container input{
+   width:100%;
+   height:100%;
+   position:absolute;
+   left:0;
+   top:0;
+   opacity: 0;
+   filter: alpha(opacity = 50);
+   cursor:pointer;
+}
+
+.help-navbar .help-btn-navbar {
+   background-color: #296C32;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+   color: #ffffff;
+}
+
+
+.help-navbar .help-btn-navbar:hover {
+   background-color: #4A8E54;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+   color: #ffffff;
+}
+
+.help-navbar .navbar-inner {
+   background-color: #3A7D43;
+   background-image: none;
+   background-repeat: no-repeat;
+   filter: none;
+}
+.help-navbar .brand {
+   color: #ffffff;
+}
+.help-navbar .nav > li > a {
+   color: #ffffff;
+   text-shadow: none;
+}
+.help-navbar .nav > li > a:hover {
+   color: #000000;
+}
+
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+
+/* Body and structure
+-------------------------------------------------- */
+body {
+  position: relative;
+  background-color: #fff;
+  background-image: url(../img/bgnoise.png);
+  background-repeat: repeat-xy;
+  direction: rtl;
+  font-family:'Iranian Sans';
+}
+
+/* Font Settings
+-------------------------------------------------- */
+@font-face {
+    /* for Internet Explorer */
+    font-family: 'Iranian Sans';
+    src: url('../fonts/iransans.eot');
+}
+
+@font-face {
+    /* Everything else */
+    font-family: 'Iranian Sans';
+    src: url(//:) format('no404'),
+		 url('../fonts/iransans.woff') format('woff'),
+		 url('../fonts/iransans.ttf') format('truetype'), 
+		 url('../fonts/iransans.svgz') format('svg'), 
+		 url('../fonts/iransans.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  /* padding: 70px 0; */
+  margin-top: 10px;
+  /* border-top: 1px solid #e5e5e5; */
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+
+body > .navbar {
+  font-size: 13px;
+}
+
+/* Change the docs' brand */
+body > .navbar .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+  color: #ddd;
+  text-shadow: 0 1px 0 rgba(150,150,150,.1), 0 0 30px rgba(155,155,155,.125);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+body > .navbar .brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(155,155,155,.1), 0 0 30px rgba(155,155,155,.4);
+}
+
+/*jqxtree Style*/
+.jqx-tree
+{
+    left: 100%;
+    right: 0;
+    float: none;
+    margin: 0px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0px;
+    overflow: hidden;
+    text-align: left;
+    outline: none;
+    white-space: nowrap;
+    line-height: 14px;
+}
+/*applied to the jqxTree root UL element.*/
+.jqx-tree-dropdown-root
+{
+    left: 100%;
+    margin: 5px 0px 5px 0px;
+    padding: 0px 5px 0px 5px;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    float: none;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #fff;
+    text-align: left;
+    outline: none;
+    white-space: nowrap;
+}
+/*applied to the jqxTree UL elements.*/
+.jqx-tree-dropdown
+{
+    left: 100%;
+    margin: 0px;
+    padding: 0px 0px 0px 10px;
+    right: 0;
+     display: block;
+    float: none;
+    width: 100%;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0px;
+    border-color: transparent;
+    text-align: left;
+    outline: none;
+}
+/*applied to a tree item.*/
+.jqx-tree-item
+{
+    text-indent: 0;
+    list-style: none;
+    padding: 3px;
+    margin: 0px;
+    float: none;
+    overflow: hidden;
+    left: 100%;
+    right: 0;
+    text-align: left;
+    cursor: default;
+    text-decoration: none;
+}
+/*applied to the jqxTree LI elements.*/
+.jqx-tree-item-li
+{
+    text-indent: 0;
+    background-color: transparent;
+    border: 0px solid transparent;
+    list-style: none;
+    left: 100%; 
+    right: 0;
+    text-align: left;
+    outline: none;
+    margin: 0px;
+    margin-top: 1px;
+    padding: 0px;
+    padding-right: 5px;
+}
+/*applied to the last LI elements in an UL element.*/
+.jqx-tree-item-u-last
+{
+    margin: 0px 0px 0px 0px;
+}
+/*applied to a tree item when the mouse is over the item.*/
+.jqx-tree-item-hover
+{
+    color: inherit;
+    right: 0;
+    padding: 3px;
+    margin: 0px;
+    list-style: none;
+    left: 100%;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*applied to a tree item when the item is selected.*/
+.jqx-tree-item-selected
+{
+    color: inherit;
+    right: 0;
+    padding: 3px;
+    margin: 0px;
+    list-style: none;
+    left: 100%;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*applied to the anchor element of a tree item.*/
+.jqx-tree-item a:link
+{
+    text-indent: 0;
+    background-color: transparent;
+    border: 0px solid transparent;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    float: none;
+    overflow: hidden;
+    left: 100%;
+    color: inherit;
+    right: 0;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+.jqx-tree-item-selected, .jqx-tree-item-hover a:hover
+{
+    color: inherit;
+}
+.jqx-tree-item-selected, .jqx-tree-item-hover a:visited
+{
+    color: inherit;
+}
+
+/*applied to a tree item when the item is disabled.*/
+.jqx-tree-item-disabled
+{
+
+}
+/*applied to a tree item when it has sub items and is collapsed. Displays an arrow icon next to the item.*/
+.jqx-tree-item-arrow-collapse
+{
+    padding-right: 0px;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/jqx/icon-right.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*applied to a tree item when it has sub items and is expanded. Displays an arrow icon next to the item.*/
+.jqx-tree-item-arrow-expand
+{
+    padding-right: 0px;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/jqx/icon-down.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*applied to a tree item when it has sub items and is expanded and the mouse is over the arrow icon.*/
+.jqx-tree-item-arrow-expand-hover
+{
+    padding-right: 0px;
+    margin-right: 0px;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/jqx/icon-down.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*applied to a tree item when it has sub items and is collapsed and the mouse is over the arrow icon.*/
+.jqx-tree-item-arrow-collapse-hover
+{
+    padding-right: 0px;
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/jqx/icon-right.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+/*applied to the tree when it is disabled.*/
+.jqx-tree-disabled
+{
+    cursor: default;
+}
+/*applied to the anchor elements in a tree when it is disabled.*/
+.jqx-tree-disabled a:link
+{
+    cursor: default;
+    text-decoration: none;
+}
+.jqx-tree-disabled a:visited
+{
+    cursor: default;
+    text-decoration: none;
+}
+.jqx-tree-disabled a:hover
+{
+    cursor: default;
+}

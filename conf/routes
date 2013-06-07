@@ -1,0 +1,74 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+# Import Secure routes
+*		/										module:secure
+
+# Messages test tools
+*		/										module:messages
+
+# Home page
+GET     /                                       Application.index
+
+GET		/reports/?								Application.index
+
+GET		/reports/new/?							Application.listReportTypes
+
+GET		/reports/new/{reportClassName}/?		Application.showNewReportForm
+
+*		/reports/save/?							Application.saveReport
+
+GET		/reports/listAll/?						Administration.listAllReports
+
+*		/reports/details/{reportId}/?			Administration.showReportDetails
+
+POST	/api/sparqldl							API.sparqldl
+
+
+# User management
+GET		/admin/users/?							Administration.listAllUsers
+GET		/admin/users/profile/{id}				Administration.showUserProfile
+GET		/admin/users/edit/{id}					Administration.editUserPage		
+GET		/admin/users/new/?						Administration.newUserPage
+GET		/admin/users/delete/{id}				Administration.confirmDeleteUser
+POST	/admin/users/delete/confirmed			Administration.deleteUser
+
+# Upload ontology utility
+GET		/admin/ontology/upload					Administration.uploadOntologyPage
+POST	/admin/ontology/upload					Administration.uploadOntology
+GET		/admin/ontology/browse					Administration.browseOntology
+GET		/admin/ontology/details					Administration.showOntologyDetails
+
+# SPARQL-DL Admin area
+GET		/sparqldl								Administration.sparqldlPage
+POST	/sparqldl								Administration.sparqldl
+
+# Administration area
+GET		/admin/?								Administration.index
+
+# Help area
+GET		/help									Help.index
+GET		/help/page/{page}						Help.showPage
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET		/javadoc/								staticDir:javadoc
+
+*		/setup/?								Setup.index
+
+GET		/settings/?								Administration.settings
+POST	/settings/?								Administration.saveSettings
+
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+
+
+#	Messages
+GET     /@messages              MessagesController.index
+POST    /@messages/update       MessagesController.save
+POST    /@messages/apply        MessagesController.applyChanges
+POST    /@messages/add          MessagesController.addKey
+POST    /@messages/sources      MessagesController.sources

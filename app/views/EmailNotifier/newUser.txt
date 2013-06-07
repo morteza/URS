@@ -1,0 +1,5 @@
+Hey ${user.name}, 
+
+Please confirm your registration by clicking on @@{Security.getConfirmationURL(user)}
+
+Thank !

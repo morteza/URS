@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <title> #{get 'title'}&{'title'}#{/get}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Styles -->
+    <link href="@{'/public/css/bootstrap-rtl.min.css'}" rel="stylesheet">
+    <link href="@{'/public/css/bootstrap-responsive-rtl.min.css'}" rel="stylesheet">
+	<!-- <link href="@{'/public/js/google-code-prettify/prettify.css'}" rel="stylesheet"> -->
+    <link href="@{'/public/css/main.css'}" rel="stylesheet" media="screen">
+    
+    	<script src="@{'/public/js/jquery.min.js'}" type="text/javascript" charset="utf-8"></script>
+    
+	#{get 'moreStyles' /}
+	
+	<link rel="shortcut icon" type="image/png" href="@{'/public/ico/favicon.ico'}">
+
+    <!-- IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+  <div style="display:block;z-index:9999;position:fixed;top:0;right:0;width:100px;height:100px;">
+  	<img src="@{'/public/img/debug-ribbon.png'}" />
+  </div>
+  
+#{secure.check models.UserType.REGISTERED}
+<div class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+        	</button>
+			<a class="brand" href="@{Application.index()}">&{'urs.application.title'}</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav pull-right">
+					<li class="dropdown" id="user-menu">
+						<a href="#user-menu" class="dropdown-toggle" data-toggle="dropdown">
+							${username}<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class=""><a href="@{Administration.settings()}"><i class="icon-cog"></i> &{'urs.admin.settings.link'}</a></li>
+							<li class=""><a href="@{Administration.showUserProfile(userId)}"><i class="icon-user"></i> &{'urs.admin.profile.link'}</a></li>
+							<li class=""><a href="@{Help.index()}"><i class="icon-book"></i> &{'urs.help.link'}</a></li>
+							<li class="divider"></li>
+							<li class=""><a href="@{Secure.logout()}"><i class="icon-off"></i> &{'secure.logout.link'}</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- dropdown tools menu -->
+				<ul class="nav pull-right">
+					<li class="dropdown" id="tools-menu">
+						<a href="#tool-menu" class="dropdown-toggle" data-toggle="dropdown">
+							ابزار
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li class=""><a href="@{Application.listReportTypes()}">&{'urs.report.newReport'}</a></li>
+#{secure.check models.UserType.ADMINISTRATOR}
+							<li class=""><a href="@{Administration.listAllReports()}">&{'urs.report.manager.title'}</a></li>
+							<li class="divider"></li>
+							<li class=""><a href="@{Administration.showOntologyDetails()}">&{'urs.tools.ontologyDetails.title'}</a></li>
+							<li class=""><a href="@{Administration.browseOntology()}">&{'urs.tools.ontologyBrowser.title'}</a></li>
+							<li class=""><a href="@{Administration.sparqldl()}">&{'urs.tools.ontologySparqldl.title'}</a></li>
+							<li class="divider"></li>
+							<li class=""><a href="@{Administration.listAllUsers()}">&{'urs.admin.userManagement.link'}</a></li>
+#{/secure.check}
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+#{/secure.check}
+
+    <div class="container" style="padding-top:50px">
+    #{if flash.success}
+	<div class="row">
+		<div class="alert row alert-success alert-block span4 offset4">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
+			<h4 class="alert-heading"></h4>
+			<p style="text-align:center">${flash.success}</p>
+		</div>
+	</div>
+	#{/if}
+	#{if flash.error}
+	<div class="row">
+		<div class="alert row alert-error alert-block span4 offset4">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
+			<h4 class="alert-heading"></h4>
+			<p style="text-align:center">${flash.error}</p>
+		</div>
+	</div>
+	#{/if}
+    
+        #{doLayout /}
+      <hr>
+      <footer class="footer">
+      <div class="container">
+	<p style="text-align:center">
+		<small>
+			<a href="@{Application.index()}"><i class="icon-home"></i></a> -
+			#{if !controllers.Secure.Security.invoke("check", "administrator")}
+			<a href="@{Help.index()}">&{'urs.help.link'}</a>
+			- <a href="@{Secure.login()}">&{'urs.admin.login'}</a>
+			#{/if}
+			#{secure.check "administrator"}
+			<a href="@{Help.index()}">&{'urs.help.link'}</a>
+			- <a href="@{Secure.logout()}">&{'secure.logout.link'}</a>
+			#{/secure.check}
+		</small>
+	</p>
+        <p style="text-align:center"><small>&{'copyrightNotice'}</small></p>
+        </div>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Javascripts ================================================== -->
+    <script src="@{'/public/js/bootstrap.js'}" type="text/javascript" charset="utf-8"></script>
+
+    <!-- <script src="@{'/public/js/google-code-prettify/prettify.js'}"></script> -->
+  	#{get 'moreScripts' /}
+  </body>
+</html>

@@ -1,0 +1,161 @@
+#{extends 'layout.html' /}
+#{set title:'جزییات آنتولوژی' /}
+
+<div class="page-header">
+	<h1>جزییات آنتولوژی</h1>
+</div>
+
+<div class="row">
+<div class="span8 offset2">
+
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2">جزییات عمومی آنتولوژی</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="width:10%" nowrap>نسخه‌ی مورد استفاده</td>
+				<td>${details?.version}</td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>شناسه‌ی یکتا</td>
+				<td>${details?.iri}</td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>تعداد اکسیوم</td>
+				<td>${details?.axioms}</td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>تعداد اکسیوم‌های منطقی</td>
+				<td>${details?.logicalAxioms}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2">جزییات منطق آنتولوژی</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="width:10%" nowrap>تعداد استنتاج‌گرهای فعال</td>
+				<td>${details?.reasoners.size}</td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>سازگاری</td>
+				<td>
+					<ul>
+					#{list items:0..details.reasoners.size()-1, as:'i'}
+						<li>
+							<strong>${details.reasoners[i]}</strong>
+							<small>(نتیجه‌ی آزمون سازگاری: ${details.consistencyResults[i]})</small>
+						</li>
+					#{/list}
+					<ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2">جزییات آنتولوژی گزارش‌ها</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="width:10%" nowrap>کل گزارش‌های ثبت‌شده</td>
+				<td>${details?.numOfAllSubmittedReports}</td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>کلاس گزارش‌ها</td>
+				<td>
+					<ul>
+					#{list items:0..details.reportTypes.size()-1, as:'i'}
+						<li>
+							<a href="@{ReportsViewer.listSubmittedReports(details.reportTypes[i])}">${details.reportTypeTitles[i]}</a>
+							<small>(${details.numOfSubmittedReports[i]} گزارش)</small>
+						</li>
+					#{/list}
+					<ul>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>فیلد‌های گزارش‌ها</td>
+				<td>
+					<ul>
+					#{list items:0..details.reportFields.size()-1, as:'i'}
+						<li>
+							<strong>${details.reportFields[i]}</strong>
+							#{if details.numOfSubmittedReportFields[i]>0}
+							<small>(در ${details.numOfSubmittedReportFields[i]} گزارش)</small>
+							#{/if}
+						</li>
+					#{/list}
+					<ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+		<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th colspan="2">فرمت‌های پشتیبانی‌شده‌ی آنتولوژی</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="2">
+				<span class="label label-important">&{'urs.index.warning'}</span>
+					<small>پیوند‌های زیر به خارج از سامانه است. قبل از کلیک از اتصال به اینترنت مطمئن شوید.</small>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<span class="label label-warning">&{'urs.index.info'}</span>
+					<small>پیوند‌های خارج از سامانه غیرفعال شده است.</small>
+				</td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>OWL 2</td>
+				<td><a href="#">اطلاعات بیشتر</a></td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>RDF/XML</td>
+				<td><a href="#">اطلاعات بیشتر</a></td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>OWL/XML</td>
+				<td><a href="#">اطلاعات بیشتر</a></td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>OWL/Functional</td>
+				<td><a href="#">اطلاعات بیشتر</a></td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>KRSS</td>
+				<td><a href="#">اطلاعات بیشتر</a></td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>Turtle</td>
+				<td><a href="#">اطلاعات بیشتر</a></td>
+			</tr>
+			<tr>
+				<td style="width:10%" nowrap>OBO Flat</td>
+				<td><a href="#">اطلاعات بیشتر</a></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<div class="form-actions">
+		<a href="@{Administration.index()}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+	</div>
+
+</div>
+</div>

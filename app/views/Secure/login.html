@@ -1,0 +1,54 @@
+#{extends 'Secure/layout.html' /}
+
+<div class="page-header">
+	<h1 style="text-align:center">&{'secure.login.header'}</h1>
+</div>
+
+<div class="row" style="text-align:center;">
+<div class="span4 offset4" style="text-align:right;">
+	#{if play?.mode.isDev()}
+	<div class="alert alert-info alert-block">
+		<h4 class="alert-heading">&{'secure.login.dev.testLogin'}</h4>
+		<p>شما در مُد آزمایشی سامانه قرار دارید.برای ورود می‌توانید از ایمیل <code>admin@local</code> و کلمه‌ی عبور <code>admin</code> استفاده نمایید.</p> اطلاعات بیشتر در مورد این مُد از طریق <a href=@{Help.showPage('development_mode')}>راهنمای مُد آزمایشی</a> قابل مشاهده است.</></p>
+	</div>
+	#{/if}
+</div>
+</div>
+<div id="login" class="row" style="text-align:center;">
+	<div class="span4 offset4" style="text-align:right;">
+		#{form @authenticate(), class:'span4'}
+			
+			<div class="control-group">
+			<div class="controls">
+				#{if flash.error}
+					<p class="error">
+						&{flash.error}
+					</p>
+				#{/if}
+				#{if flash.success}
+					<p class="success">
+						&{flash.success}
+					</p>
+				#{/if}
+				<label for="username" class="control-label span4">&{'secure.email'}</label>
+				<div class="input-append span4">
+					<input type="text" name="username" id="username" value="${flash.username}"  class="input-large"/>
+					<span class="add-on"><i class="icon-envelope"></i></span>
+				</div>
+				<label for="password" class="control-label span4">&{'secure.password'}</label>
+				<div class="input-append span4">
+					<input type="password" name="password" id="password" value="" class="input-large" />
+					<span class="add-on"><i class="icon-asterisk"></i></span>
+				</div>
+				<label class="checkbox span4">
+					<input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
+					<span style="cursor: pointer;">&{'secure.remember'}</span>
+				</label>
+				<div class="span4">
+					<input type="submit" class="btn btn-primary" id="signin" value="&{'secure.signin'}"/>
+				</div>
+			</div>
+			</div>
+		#{/form}
+		</div>
+</div>

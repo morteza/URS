@@ -1,0 +1,12 @@
+11 Nov 2012 00:53:45,211 INFO  ~ Starting /Users/morteza/Desktop/itrc.urs.local
+11 Nov 2012 00:53:45,215 WARN  ~ Declaring modules in application.conf is deprecated. Use dependencies.yml instead (module.cobertura)
+11 Nov 2012 00:53:45,216 INFO  ~ Module cobertura is available (/usr/local/Cellar/play/1.2.5/libexec/modules/cobertura-2.4)
+11 Nov 2012 00:53:45,217 INFO  ~ Module secure is available (/usr/local/Cellar/play/1.2.5/libexec/modules/secure)
+11 Nov 2012 00:53:46,463 WARN  ~ You're running Play! in DEV mode
+11 Nov 2012 00:53:46,642 INFO  ~ Listening for HTTP on port 8080 (Waiting a first request to start) ...
+11 Nov 2012 00:53:52,327 ERROR ~ Cannot include routes for module messages (not found)
+11 Nov 2012 00:54:05,450 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+11 Nov 2012 00:54:07,055 INFO  ~ Application 'itrc.urs.local' is now started !
+11 Nov 2012 00:54:09,677 INFO  ~ Ontology version: http://itrc.ac.ir/ReportOntology/0.13.0
+11 Nov 2012 00:54:47,629 INFO  ~ Cobertura plugin: generating test coverage report
+11 Nov 2012 00:54:52,427 INFO  ~ Test coverage report has been generated: file:/Users/morteza/Desktop/itrc.urs.local/test-result/code-coverage/index.html

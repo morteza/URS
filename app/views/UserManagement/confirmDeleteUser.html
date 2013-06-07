@@ -1,0 +1,14 @@
+#{extends 'layout.html' /}
+#{set title:'confirmDeleteUser.html' /}
+
+<div class="row">
+	<br />
+	<div class="span8 offset2" style="text-align:center;">
+	<p>&{'urs.admin.userManagement.confirmDelete',user.name,user.email}</p>
+	#{form @Administration.deleteUser()}
+		<input type="hidden" name="id" value="${user.id}" />
+		<a href="@{Administration.listAllUsers()}" class="btn btn-primary">&{'urs.returnBtn'}</a>
+		<input type="submit" class="btn btn-danger" value="&{'urs.admin.userManagement.delete'}">
+	#{/form}
+	</div>
+</div>

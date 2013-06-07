@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <title>#{get 'title'}${'title'}#{/get}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Styles -->
+    <link href="@{'/public/css/bootstrap-rtl.min.css'}" rel="stylesheet">
+    <link href="@{'/public/css/bootstrap-responsive-rtl.min.css'}" rel="stylesheet">
+	<link href="@{'/public/js/google-code-prettify/prettify.css'}" rel="stylesheet">
+    <link href="@{'/public/css/main.css'}" rel="stylesheet" media="screen">
+    
+	#{get 'moreStyles' /}
+	
+	<style>
+		body {
+			background: none;
+		}
+		img.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+	
+	<link rel="shortcut icon" type="image/png" href="@{'/public/ico/favicon.ico'}">
+
+    <!-- IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+<div class="navbar navbar-fixed-top help-navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button"class="btn help-btn-navbar btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+        	</button>
+			<a class="brand" href="@{Help.index()}">&{'urs.help.pages.index'}</a>
+			<div class="nav-collapse collapse">
+				<ul class="nav pull-right">
+					<li>
+						<a href="@{Application.index()}"><i class="icon-home icon-white"></i>&{'urs.help.returnBtn'}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <div class="container" style="padding-top:50px">
+    	<div class="page-header">
+			<h1>#{get 'title'}${'title'}#{/get}</h1>
+		</div>
+        #{doLayout /}
+      <hr>
+      <footer class="footer">
+      <div class="container">
+        <p style="text-align:center"><small>&{'copyrightNotice'}</small></p>
+      </div>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Javascripts ================================================== -->
+	<script src="@{'/public/js/jquery.min.js'}" type="text/javascript" charset="utf-8"></script>
+    <script src="@{'/public/js/bootstrap.js'}" type="text/javascript" charset="utf-8"></script>
+
+<!-- Bootstrap Javascript Plugins -->
+<!--
+    <script src="@{'/public/js/google-code-prettify/prettify.js'}"></script>
+-->
+  	#{get 'moreScripts' /}
+  </body>
+</html>

@@ -1,0 +1,45 @@
+#{extends 'layout.html' /}
+#{set title}&{'urs.admin.sparqldl.title'}#{/set}
+
+<div class="page-header">
+	<h1>&{'urs.admin.sparqldl.header'}</h1>
+	<p>با استفاده از فرم زیر و به زبان  SPARQL-DL بر روی آنتولوژی پرس‌وجو کنید.<br/>\tبرای اطلاعات بیشتر درباره‌ی این زبان به <a href="@{Help.showPage('sparql-dl')}">راهنمای پرس‌وجوی آنتولوژی</a> مراجعه نمایید</p>
+</div>
+<div class="row">
+#{form @Administration.sparqldl() , class:'form-vertical span8 offset2', method:'POST', id:'ReportForm', enctype:'multipart/form-data' }
+	<label for="query">&{'urs.admin.sparqldl.query.label'}</label>
+	<textarea class="span8 xxlarge" rows="8" id="query" name="query" style="direction:ltr">${defaultQuery}</textarea>
+	<div class="form-actions">
+		<a class="btn btn-primary" name="submit" id="submit" href="#" onclick="javascript:submitQuery();return false;">&{'urs.admin.sparqldl.query'}</a>
+		<a href="@{Administration.index}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+	</div>
+	
+#{/form}
+<div id="result_holder" class="span8 well offset2" style="display:none;">
+	<h3>&{'urs.admin.sparqldl.query.result'}</h3>
+	<div id="result" class="" style="direction:ltr;">&{'urs.admin.sparqldl.query.result.location'}</div>
+</div>
+</div>
+
+#{set 'moreScripts'}
+<script type="text/javascript">
+        
+	function submitQuery() {
+		
+		var query = $("textarea#query").val();
+				
+		$.ajax({
+		type: "POST",
+		url: "@{API.sparqldl()}",
+		data: query,
+		contentType: "text/plain; charset=utf-8",
+		success: function(result) {
+			$("#result").html("<pre>" + result + "</pre>");
+			$("#result_holder").show();
+		}
+		
+		});
+	}
+
+</script>
+#{/set}

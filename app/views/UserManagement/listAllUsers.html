@@ -1,0 +1,31 @@
+#{extends 'layout.html' /}
+#{set title:messages.get("urs.admin.userManagement.header") /}
+
+<div class="page-header">
+	<h1>&{'urs.admin.userManagement.header'}</h2>
+</div>
+
+      <div class="row">
+        <div class="span8 offset2">
+        	<table class="table table-striped table-bordered table-condensed">
+        	#{list users, as:'user'}
+	        	<tr>
+	        	<td style="vertical-align:middle;">
+    	    		 <p style="margin-bottom: 0px;"><a href="@{Administration.showUserProfile(user.id)}">${user.name}</a> <small>${user.email}</small></p>
+        		</td>
+        		<td style="width:1%;vertical-align:middle;">
+        			<a href="@{Administration.editUserPage(user.id)}" class="btn btn-mini btn-info"><i class="icon-pencil icon-white"></i></a>
+        		</td>
+        		<td style="width:1%;vertical-align:middle;">
+        			<a href="@{Administration.confirmDeleteUser(user.id)}" class="btn btn-mini btn-danger"><i class="icon-remove icon-white"></i></a>
+        		</td>
+        		</tr>
+        	#{/list}
+        	</table>
+      	<div class="form-actions">
+      	<a href="@{Administration.newUserPage()}" class="btn btn-success">&{'urs.admin.userManagement.newUser'}</a>
+		<a href="@{Administration.settings()}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+	</div>
+        </div><!--/span-->
+      </div><!--/row-->
+      

@@ -1,4 +1,4 @@
-URS
-===
+Unified Ontology-based Security Information and Event Management System
+====
 
-URS issues and some public source codes holder
+OWL ontology is also used instead of database in backend as proof of concept for OWL-based NoSQL solution.

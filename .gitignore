@@ -1,6 +1,13 @@
 *.class
-
-# Package Files #
-*.jar
 *.war
-*.ear
+/eclipse
+/db
+tmp
+/application.log
+/.settings
+/.project
+/.classpath
+/.DS_Store
+/.project
+/logs
+/Windows/play

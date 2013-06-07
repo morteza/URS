@@ -1,0 +1,19 @@
+#{extends 'layout.html' /}
+#{set 'title'}&{'urs.admin.showReportDetails.title'}#{/set}
+
+<div class="page-header">
+	<div class="">
+	</div>
+</div>
+
+<div class="row">
+<div class="span8 offset2">
+	<table class="table table-striped table-bordered">
+		${detailsTableHTML.raw()}
+	</table>
+	<div class="form-actions">
+		<a href="@{Administration.listAllReports()}" class="btn">&{'urs.admin.reportDetails.backButton'}</a>
+	</div>
+
+</div>
+</div>

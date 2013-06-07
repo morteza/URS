@@ -1,0 +1,12 @@
+# Specialized file for English language.
+#
+
+secure.title=Login
+secure.header=Login
+secure.email=Email
+secure.password=Password
+secure.remember=Remember me
+secure.signin=Signin
+
+
+copyrightNotice=&copy; Research Institute for ICT (ex ITRC)

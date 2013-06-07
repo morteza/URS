@@ -1,0 +1,31 @@
+#{extends 'layout.html' /}
+#{set 'title'}&{'urs.report.listAll.title'}#{/set}
+
+<div class="page-header">
+	<h1>&{'urs.report.listAll.header'}</h1>
+</div>
+
+<div class="row">
+<div class="span8 offset2">
+	<table class="table table-striped table-bordered table-condensed">
+		<thread>
+			<th>نوع گزارش</th>
+			<th>تعداد گزارش ثبت‌شده</th>
+		</thead>
+		<tbody>
+		#{if titles && counts && types}
+			#{list items:0..size-1, as:'i'}
+				<tr>
+					<td>#{a @ReportsViewer.listSubmittedReports(types[i]), class:""}${titles[i]}#{/a}</td>
+					<td>${counts[i]} </td>
+				</tr>
+			#{/list}
+		#{/if}
+		</tbody>
+	</table>
+	<div class="form-actions">
+		<a href="@{Administration.listAllReports()}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+	</div>	
+</div>
+</div>
+</div>

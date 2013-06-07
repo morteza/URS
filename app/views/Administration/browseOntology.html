@@ -1,0 +1,29 @@
+#{extends 'layout.html' /}
+#{set title:'ontologyBrowser.html' /}
+
+
+	<div class="form-actions">
+		<a href="@{Administration.index}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+	</div>
+
+<div class="row">
+	${browserHTML.raw()}
+</div>
+
+#{set 'moreStyles'}
+    <link href="@{'/public/css/datepicker.css'}" rel="stylesheet" media="screen">
+    <link href="@{'/public/css/topdown-tree.css'}" rel="stylesheet" media="screen">
+   	<link href="@{'/public/css/jqx/jqx.base.css'}" rel="stylesheet" media="screen">"
+   	<script src="@{'/public/js/jqx/jqxcore.js'}"></script>
+   	<script src="@{'/public/js/jqx/jqxscrollbar.js'}"></script>
+   	<script src="@{'/public/js/jqx/jqxbuttons.js'}"></script>
+   	<script src="@{'/public/js/jqx/jqxtree.js'}"></script>
+   	<script src="@{'/public/js/jqx/jqxpanel.js'}"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#Domain_Concept_tree").jqxTree({ toggleMode: 'click'});
+		});
+	</script>
+    
+#{/set}

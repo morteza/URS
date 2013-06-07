@@ -1,0 +1,21 @@
+#{extends 'Help/layout.html' /}
+#{set 'title'}&{'urs.help.title'}#{/set}
+
+#{if flash.error}
+<div class="row">
+	<div class="alert row alert-error alert-block span4 offset4">
+		<a class="close" data-dismiss="alert" href="#">&times;</a>
+		<h4 class="alert-heading"></h4>
+		<p style="text-align:center">${flash.error}</p>
+	</div>
+</div>
+<br />
+#{/if}
+
+#{if pages}
+	#{list items:0..pages.size-1, as:'i'}
+		<p><a href="@{Help.showPage(pages[i])}">&{titles[i]}</a></p>
+	#{/list}
+		<hr>
+		<p><a href="@{'javadoc/index.html'}"><strong>گزارش‌های مستندسازی کُدها</strong></a></p>
+#{/if}

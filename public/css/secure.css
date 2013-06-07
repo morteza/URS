@@ -1,0 +1,86 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+
+/* Body and structure
+-------------------------------------------------- */
+html, body {
+  position: relative;
+  background-color: #fff;
+  background-image: url(../img/bgnoise.png);
+  background-repeat: repeat-xy;
+  direction: rtl;
+  font-family:'Iranian Sans';
+}
+
+/* Font Settings
+-------------------------------------------------- */
+@font-face {
+    /* for Internet Explorer */
+    font-family: 'Iranian Sans';
+    src: url('../fonts/iransans.eot');
+}
+
+@font-face {
+    /* Everything else */
+    font-family: 'Iranian Sans';
+    src: url(//:) format('no404'),
+		 url('../fonts/iransans.woff') format('woff'),
+		 url('../fonts/iransans.ttf') format('truetype'), 
+		 url('../fonts/iransans.svgz') format('svg'), 
+		 url('../fonts/iransans.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.footer {
+  /* padding: 70px 0; */
+  margin-top: 10px;
+  /* border-top: 1px solid #e5e5e5; */
+}
+.footer p {
+  margin-bottom: 0;
+  color: #777;
+}
+.footer-links {
+  margin: 10px 0;
+}
+.footer-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* ------------------------------------------------ */
+
+#password, #username {
+	direction: ltr;
+}
+
+#signin-field input {
+    margin-top: 10px;
+	padding: 5px;
+
+}
+
+#login .error, #login .success  {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#login .error {
+    background: #c00 !important;
+}
+
+#login .success {
+    background: #008800 !important;
+}

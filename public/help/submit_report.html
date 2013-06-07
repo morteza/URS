@@ -1,0 +1,36 @@
+#{extends 'Help/layout.html' /}
+#{set 'title'}
+&{'urs.help.submitReport.title'}
+#{/set}
+
+<p>
+&{'urs.help.submitReport.header'} 
+</p>
+<br />
+<p>
+	<li><strong>&{'urs.help.firstStep'}</strong></li>
+	&{'urs.help.submitReport.firstStepDescription',""}
+	<br />
+	<img src="@{'public/help/images/1_submit_report_link.png'}" class="center img-polaroid"/>
+</p>
+<br />
+
+<p>
+	<li><strong>&{'urs.help.secondStep'}</strong></li>
+	&{'urs.help.submitReport.secondStepDescription'}
+	<br />
+	<img src="@{'public/help/images/2_choose_report_type.png'}" class="center img-polaroid"/>
+</p>
+<br />
+
+<p>
+	<li><strong>&{'urs.help.thirdStep'}</strong></li>
+	&{'urs.help.submitReport.thirdStepDescription','<span class="label label-info">نکته:</span>'}
+	<br />
+	<img src="@{'public/help/images/3_submit_report_form.png'}" class="center img-polaroid"/>
+	<br />
+	&{'urs.help.submitReport.submitDone'}
+	<br />
+	<img src="@{'public/help/images/4_submit_report_done.png'}" class="center img-polaroid"/>
+</p>
+<br />

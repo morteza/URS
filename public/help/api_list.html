@@ -1,0 +1,998 @@
+#{extends 'Help/layout.html' /}
+
+#{set 'title'}
+راهنمای API
+#{/set}
+
+<html>
+
+<body>
+
+<div class=Section1>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;
+&#1575;&#1740;&#1606; &#1576;&#1582;&#1588; &#1576;&#1607;
+&#1576;&#1585;&#1585;&#1587;&#1740; </span><span dir=LTR style='mso-bidi-font-family:
+"B Nazanin";mso-bidi-language:FA'>API</span><span lang=FA style='font-family:
+"B Nazanin";mso-bidi-language:FA'>&#1607;&#1575;&#1740;
+&#1601;&#1585;&#1575;&#1607;&#1605; &#1588;&#1583;&#1607;
+&#1578;&#1608;&#1587;&#1591; &#1587;&#1575;&#1605;&#1575;&#1606;&#1607;</span><span
+lang=AR-SA style='font-family:"B Nazanin"'> &#1607;&#1575;&#1740;
+&#1605;&#1581;&#1604;&#1740; &#1608; &#1605;&#1585;&#1705;&#1586;&#1740;
+&#1605;&#1740; &#1662;&#1585;&#1583;&#1575;&#1586;&#1740;&#1605;.
+&#1580;&#1583;&#1608;&#1604;</span><span lang=FA style='font-family:"B Nazanin";
+mso-bidi-language:FA'>&#8204;&#1607;&#1575;&#1740;</span><span lang=AR-SA
+style='font-family:"B Nazanin"'> &#1586;&#1740;&#1585;
+&#1606;&#1588;&#1575;&#1606;</span><span dir=LTR style='mso-bidi-font-family:
+"B Nazanin"'>&#8204;</span><span lang=AR-SA style='font-family:"B Nazanin"'>&#1583;&#1607;&#1606;&#1583;&#1607;
+&#1575;&#1740;&#1606; </span><span dir=LTR style='mso-bidi-font-family:"B Nazanin"'>API</span><span
+lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1607;&#1575;&#1548;
+&#1605;&#1581;&#1604; &#1601;&#1585;&#1575;&#1607;&#1605; &#1588;&#1583;&#1606;
+&#1570;&#1606;&#1548; &#1608;&#1585;&#1608;&#1583;&#1740; &#1608;
+&#1582;&#1585;&#1608;&#1580;&#1740;&#1548; &#1608; &#1583;&#1740;&#1711;&#1585;
+&#1608;&#1740;&#1688;&#1711;&#1740;</span><span dir=LTR style='mso-bidi-font-family:
+"B Nazanin";mso-bidi-language:FA'>&#8204;</span><span lang=FA style='font-family:
+"B Nazanin";mso-bidi-language:FA'>&#1607;&#1575;&#1740; &#1607;&#1585;
+&#1740;&#1705; &#1575;&#1587;&#1578;.<o:p></o:p></span></p>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;
+&#1607;&#1585; &#1580;&#1583;&#1608;&#1604; &#1605;&#1606;&#1592;&#1608;&#1585;
+&#1575;&#1586; </span><span dir=LTR></span><span dir=LTR style='mso-bidi-font-family:
+"B Nazanin";mso-bidi-language:FA'><span dir=LTR></span>&lt;LocalServer&gt;</span><span
+dir=RTL></span><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:
+FA'><span dir=RTL></span> &#1570;&#1583;&#1585;&#1587;
+&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;&#8204;&#1740;
+&#1605;&#1581;&#1604;&#1740; &#1608; &#1605;&#1606;&#1592;&#1608;&#1585;
+&#1575;&#1586; </span><span dir=LTR></span><span dir=LTR style='mso-bidi-font-family:
+"B Nazanin";mso-bidi-language:FA'><span dir=LTR></span>&lt;CentralServer&gt;</span><span
+dir=RTL></span><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:
+FA'><span dir=RTL></span> &#1570;&#1583;&#1585;&#1587;
+&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;&#8204;&#1740;
+&#1605;&#1585;&#1705;&#1586;&#1740; &#1575;&#1587;&#1578;.
+&#1575;&#1604;&#1711;&#1608;&#1740; &#1575;&#1740;&#1606;
+&#1580;&#1583;&#1575;&#1608;&#1604; &#1583;&#1585; </span><!--[if supportFields]><span
+lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'><span
+style='mso-element:field-begin'></span><span style='mso-spacerun:yes'>�</span></span><span
+dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>REF</span><span
+dir=RTL></span><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:
+FA'><span dir=RTL></span> _</span><span dir=LTR style='mso-bidi-font-family:
+"B Nazanin";mso-bidi-language:FA'>Ref329493452 \h</span><span dir=RTL></span><span
+style='font-family:"B Nazanin";mso-bidi-language:FA'><span dir=RTL></span> <span
+lang=FA><span style='mso-element:field-separator'></span></span></span><![endif]--><span
+lang=AR-SA style='font-family:"B Nazanin"'>&#1580;&#1583;&#1608;&#1604; <span
+style='mso-no-proof:yes'>1</span></span><span lang=FA style='font-family:"B Nazanin";
+mso-bidi-language:FA'><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F005200650066003300320039003400390033003400350032000000</w:data>
+</xml><![endif]--></span><!--[if supportFields]><span lang=FA style='font-family:
+"B Nazanin";mso-bidi-language:FA'><span style='mso-element:field-end'></span></span><![endif]--><span
+lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>
+&#1606;&#1605;&#1575;&#1740;&#1588; &#1583;&#1575;&#1583;&#1607;
+&#1588;&#1583;&#1607; &#1575;&#1587;&#1578;.
+&#1583;&#1587;&#1578;&#1585;&#1587;&#1740; &#1576;&#1607; &#1575;&#1740;&#1606;
+&#1608;&#1575;&#1587;&#1591;&#8204;&#1607;&#1575; &#1576;&#1585;
+&#1585;&#1608;&#1740; &#1588;&#1576;&#1705;&#1607; &#1607;&#1605;&#1711;&#1740;
+&#1575;&#1586; &#1591;&#1585;&#1740;&#1602; &#1605;&#1578;&#1608;&#1583; </span><span
+dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>POST</span><span
+dir=RTL></span><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:
+FA'><span dir=RTL></span> &#1589;&#1608;&#1585;&#1578; &#1605;&#1740;&#8204;&#1711;&#1740;&#1585;&#1583;.<o:p></o:p></span></p>
+
+<p class=MsoCaption align=center dir=RTL style='text-align:center;page-break-after:
+avoid;direction:rtl;unicode-bidi:embed'><a name="_Ref329493452"><span
+lang=AR-SA style='font-family:"B Nazanin"'>&#1580;&#1583;&#1608;&#1604; </span></a><!--[if supportFields]><span
+style='mso-bookmark:_Ref329493452'></span><span style='mso-element:field-begin'></span><span
+style='mso-bookmark:_Ref329493452'><span lang=AR-SA style='font-family:"B Nazanin"'><span
+style='mso-spacerun:yes'>�</span></span></span><span style='mso-bookmark:_Ref329493452'><span
+dir=LTR style='mso-bidi-font-family:"B Nazanin"'>SEQ</span></span><span
+style='mso-bookmark:_Ref329493452'><span dir=RTL></span><span lang=AR-SA
+style='font-family:"B Nazanin"'><span dir=RTL></span>
+&#1580;&#1583;&#1608;&#1604; \* </span></span><span style='mso-bookmark:_Ref329493452'><span
+dir=LTR style='mso-bidi-font-family:"B Nazanin"'>ARABIC</span></span><span
+style='mso-bookmark:_Ref329493452'><span dir=RTL></span><span style='font-family:
+"B Nazanin"'><span dir=RTL></span> <span lang=AR-SA><span style='mso-element:
+field-separator'></span></span></span></span><![endif]--><span
+style='mso-bookmark:_Ref329493452'><span lang=AR-SA style='font-family:"B Nazanin"'><span
+style='mso-no-proof:yes'>1</span></span></span><!--[if supportFields]><span
+style='mso-bookmark:_Ref329493452'></span><span style='mso-element:field-end'></span><![endif]--><span
+style='mso-bookmark:_Ref329493452'></span><span style='mso-bookmark:_Ref329493452'></span><span
+lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'> -
+&#1575;&#1604;&#1711;&#1608;&#1740; &#1580;&#1583;&#1575;&#1608;&#1604;
+&#1578;&#1608;&#1589;&#1740;&#1601; </span><span dir=LTR style='mso-bidi-font-family:
+"B Nazanin";mso-bidi-language:FA'>API</span><span lang=FA style='font-family:
+"B Nazanin";mso-bidi-language:FA'>&#1607;&#1575;</span><span dir=LTR
+style='mso-bidi-font-family:"B Nazanin"'><o:p></o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=224 style='width:168.15pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1606;&#1575;&#1605;
+  </span></b><st1:stockticker w:st="on"><b><span dir=LTR style='mso-bidi-font-family:
+   "B Nazanin";mso-bidi-language:FA'>API</span></b></st1:stockticker><b><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></b></p>
+  </td>
+  <td width=141 style='width:105.4pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1608;&#1585;&#1608;&#1583;&#1740;<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=224 style='width:168.15pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1605;&#1581;&#1604;
+  &#1575;&#1585;&#1575;&#1574;&#1607;</span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=141 style='width:105.4pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1582;&#1585;&#1608;&#1580;&#1740;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span lang=FA dir=RTL
+  style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1570;&#1583;&#1585;&#1587;
+  &#1583;&#1587;&#1578;&#1585;&#1587;&#1740;<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1591;&#1576;&#1602;
+&#1575;&#1604;&#1711;&#1608;&#1740; &#1576;&#1575;&#1604;&#1575;&#1548;
+&#1575;&#1740;&#1606; </span><span dir=LTR style='mso-bidi-font-family:"B Nazanin";
+mso-bidi-language:FA'>API</span><span lang=FA style='font-family:"B Nazanin";
+mso-bidi-language:FA'>&#1607;&#1575; &#1593;&#1576;&#1575;&#1585;&#1578;&#8204;&#1606;&#1583;
+&#1575;&#1586;:<o:p></o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1576;&#1607;&#8204;&#1585;&#1608;&#1586;&#1585;&#1587;&#1575;&#1606;&#1740;
+  &#1570;&#1606;&#1578;&#1608;&#1604;&#1608;&#1688;&#1740;
+  &#1605;&#1581;&#1604;&#1740;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1601;&#1575;&#1740;&#1604;
+  &#1570;&#1606;&#1578;&#1608;&#1604;&#1608;&#1688;&#1740; &#1576;&#1607;
+  &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>OWL/XML<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>boolean</span><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>updateOntology</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;&#1740;&#1575;&#1601;&#1578;
+  &#1662;&#1575;&#1740;&#1711;&#1575;&#1607;&#8204;&#1583;&#1575;&#1606;&#1588;
+  &#1605;&#1581;&#1604;&#1740;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  dir=LTR></span><span dir=LTR style='mso-bidi-font-family:"B Nazanin";
+  mso-bidi-language:FA'><span dir=LTR></span>-<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1601;&#1575;&#1740;&#1604;
+  &#1662;&#1575;&#1740;&#1711;&#1575;&#1607;&#8204;&#1583;&#1575;&#1606;&#1588;
+  &#1576;&#1607; &#1601;&#1585;&#1605;&#1578;</span><span dir=LTR></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><span
+  dir=LTR></span> OWL/XML<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>downloadKnowledgeBase</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1575;&#1601;&#1586;&#1608;&#1583;&#1606;
+  &#1711;&#1586;&#1575;&#1585;&#1588;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1711;&#1586;&#1575;&#1585;&#1588;
+  &#1576;&#1607; &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR
+  style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>boolean<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>addReport</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;&#1740;&#1575;&#1601;&#1578;
+  &#1570;&#1606;&#1578;&#1608;&#1604;&#1608;&#1688;&#1740;
+  &#1587;&#1585;&#1575;&#1587;&#1585;&#1740;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1606;&#1587;&#1582;&#1607;&#8204;&#1740;
+  &#1570;&#1606;&#1578;&#1608;&#1604;&#1608;&#1688;&#1740; (&#1575;&#1582;&#1578;&#1740;&#1575;&#1585;&#1740;)</span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1585;&#1705;&#1586;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1601;&#1575;&#1740;&#1604;
+  &#1662;&#1575;&#1740;&#1711;&#1575;&#1607;&#8204;&#1583;&#1575;&#1606;&#1588;
+  &#1576;&#1607; &#1601;&#1585;&#1605;&#1578;</span><span dir=LTR></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><span
+  dir=LTR></span> OWL/XML<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;CentralServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>getOntology</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;&#1740;&#1575;&#1601;&#1578;
+  &#1711;&#1586;&#1575;&#1585;&#1588; &#1576;&#1585;&#1581;&#1587;&#1576;
+  &#1606;&#1608;&#1593;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1606;&#1608;&#1593;
+  &#1711;&#1586;&#1575;&#1585;&#1588; &#1576;&#1607;
+  &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span>
+  &#1608; <span style='background:silver;mso-highlight:silver'>&#1605;&#1585;&#1705;&#1586;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1604;&#1740;&#1587;&#1578;
+  &#1588;&#1606;&#1575;&#1587;&#1607; &#1711;&#1586;&#1575;&#1585;&#1588;&#8204;&#1607;&#1575;
+  &#1576;&#1607; &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR
+  style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>geReportsByType</span><o:p></o:p></span></p>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;CentralServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>geReportsByType</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;page-break-inside:avoid'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;&#1740;&#1575;&#1601;&#1578;
+  &#1711;&#1586;&#1575;&#1585;&#1588; &#1576;&#1585;&#1581;&#1587;&#1576; &#1588;&#1606;&#1575;&#1587;&#1607;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1606;&#1608;&#1593;
+  &#1711;&#1586;&#1575;&#1585;&#1588; &#1576;&#1607;
+  &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;page-break-inside:avoid'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span>
+  &#1608; <span style='background:silver;mso-highlight:silver'>&#1605;&#1585;&#1705;&#1586;&#1740;</span><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1711;&#1586;&#1575;&#1585;&#1588;
+  &#1576;&#1607; &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR
+  style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>JSON</span><span
+  dir=RTL></span><span style='font-family:"B Nazanin";mso-bidi-language:FA'><span
+  dir=RTL></span> <span lang=FA>&#1740;&#1575; &#1582;&#1591;&#1575;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes;page-break-inside:avoid'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>getReportById</span><o:p></o:p></span></p>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;CentralServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>getReportById</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1588;&#1582;&#1740;&#1589;
+  &#1587;&#1575;&#1586;&#1711;&#1575;&#1585;&#1740;
+  &#1711;&#1586;&#1575;&#1585;&#1588;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1711;&#1586;&#1575;&#1585;&#1588;
+  &#1576;&#1607; &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR
+  style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1582;&#1585;&#1608;&#1580;&#1740;
+  &#1575;&#1587;&#1578;&#1606;&#1578;&#1575;&#1580;&#8204;&#1711;&#1585;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>checkConsistency</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;&#1740;&#1575;&#1601;&#1578;
+  &#1587;&#1575;&#1582;&#1578;&#1575;&#1585;
+  &#1711;&#1586;&#1575;&#1585;&#1588;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1606;&#1608;&#1593;
+  &#1711;&#1586;&#1575;&#1585;&#1588;</span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1582;&#1578;&#1575;&#1585;
+  &#1711;&#1586;&#1575;&#1585;&#1588; &#1576;&#1607;
+  &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>JSON</span><span dir=RTL></span><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'><span dir=RTL></span>
+  &#1576;&#1585;&#1575;&#1740; </span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>HTML<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>getReportStructure</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1583;&#1585;&#1740;&#1575;&#1601;&#1578;
+  &#1575;&#1606;&#1608;&#1575;&#1593; &#1711;&#1586;&#1575;&#1585;&#1588;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>-</span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1604;&#1740;&#1587;&#1578;
+  &#1575;&#1606;&#1608;&#1575;&#1593; &#1711;&#1586;&#1575;&#1585;&#1588;
+  &#1576;&#1607; &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR
+  style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>getReportTypes</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1662;&#1585;&#1587;&#8204;&#1608;&#1580;&#1608;&#1740;
+  &#1570;&#1606;&#1578;&#1608;&#1604;&#1608;&#1688;&#1740;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1593;&#1576;&#1575;&#1585;&#1578;
+  &#1662;&#1585;&#1587;&#8204;&#1608;&#1580;&#1608;&#1740; </span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>SPARQL<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span>
+  &#1608; <span style='background:silver;mso-highlight:silver'>&#1605;&#1585;&#1705;&#1586;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1604;&#1740;&#1587;&#1578;
+  &#1711;&#1586;&#1575;&#1585;&#1607;&#8204;&#1607;&#1575;&#1740;
+  &#1587;&#1607;&#8204;&#1580;&#1586;&#1740;&#1740; &#1576;&#1607;
+  &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>queryOntology</span><o:p></o:p></span></p>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;CentralServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>queryOntology</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal dir=RTL style='text-align:right;direction:rtl;unicode-bidi:
+embed'><span dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:
+FA'><o:p>&nbsp;</o:p></span></p>
+
+<div align=right>
+
+<table class=MsoTableGrid dir=rtl border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt;mso-table-dir:bidi'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:#BFBFBF;mso-background-themecolor:background1;
+  mso-background-themeshade:191;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><b><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1662;&#1585;&#1587;&#8204;&#1608;&#1580;&#1608;&#1740;
+  &#1662;&#1575;&#1740;&#1711;&#1575;&#1607;&#8204;&#1583;&#1575;&#1606;&#1588;<o:p></o:p></span></b></p>
+  </td>
+  <td width=166 style='width:124.15pt;border:solid windowtext 1.0pt;border-right:
+  none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1593;&#1576;&#1575;&#1585;&#1578;
+  &#1662;&#1585;&#1587;&#8204;&#1608;&#1580;&#1608;&#1740; </span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'>SPARQL<o:p></o:p></span></p>
+  </td>
+  <td width=274 rowspan=3 valign=top style='width:205.25pt;border:solid windowtext 1.0pt;
+  border-right:none;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal dir=RTL style='margin-bottom:0in;margin-bottom:.0001pt;
+  text-align:right;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1578;&#1608;&#1590;&#1740;&#1581;&#1575;&#1578;<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=199 style='width:149.4pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1587;&#1575;&#1605;&#1575;&#1606;&#1607;
+  <span style='background:silver;mso-highlight:silver'>&#1605;&#1581;&#1604;&#1740;</span>
+  &#1608; <span style='background:silver;mso-highlight:silver'>&#1605;&#1585;&#1705;&#1586;&#1740;</span></span><span
+  dir=LTR style='mso-bidi-font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+  <td width=166 style='width:124.15pt;border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:solid windowtext 1.0pt;border-right:none;mso-border-top-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=RTL style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal;direction:rtl;unicode-bidi:embed'><span
+  lang=FA style='font-family:"B Nazanin";mso-bidi-language:FA'>&#1604;&#1740;&#1587;&#1578;
+  &#1711;&#1586;&#1575;&#1585;&#1607;&#8204;&#1607;&#1575;&#1740;
+  &#1587;&#1607;&#8204;&#1580;&#1586;&#1740;&#1740; &#1576;&#1607;
+  &#1601;&#1585;&#1605;&#1578; </span><span dir=LTR style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>JSON<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=365 colspan=2 style='width:273.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;LocalServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>queryOntology</span><o:p></o:p></span></p>
+  <p class=MsoNormal align=center dir=LTR style='margin-bottom:0in;margin-bottom:
+  .0001pt;text-align:center;line-height:normal'><span style='mso-bidi-font-family:
+  "B Nazanin";mso-bidi-language:FA'>&lt;CentralServer&gt;/api/<span
+  style='background:yellow;mso-highlight:yellow'>queryOntology</span></span><span
+  lang=FA dir=RTL style='font-family:"B Nazanin";mso-bidi-language:FA'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+</div>
+
+</body>
+

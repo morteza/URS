@@ -1,0 +1,103 @@
+#{extends 'layout.html' /}
+#{set 'title'}&{'urs.admin.uploadOntology.title'}#{/set}
+
+<div class="page-header">
+	<h1>&{'urs.admin.uploadOntology.header'}</h1>
+</div>
+<div class="row">
+<div class="columns span8 offset2">
+	#{form @Administration.uploadOntology() , class:'form-vertical', method:'POST', id:'UploadOntologyForm', enctype:'multipart/form-data' }
+		<div class="upload_file_container btn">
+    		&{'urs.admin.uploadOntology.chooseFile'}
+    		<input type="file" class="span4" id="ontologyFile" name="ontologyFile" />
+		</div>
+				&nbsp;<span id="ontologyFileName"></span>
+	
+		<br />
+
+	<div class="form-actions">
+		<input type="submit" class="btn btn-danger" data-loading--text="&{'urs.admin.uploadOntology.sending'}" id="uploadOntologyBtn" value="&{'urs.admin.uploadOntology.update'}">
+		<a href="@{Administration.settings}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+	</div>
+	
+	#{/form}
+</div>
+</div>
+
+#{set 'moreScripts'}
+<script type="text/javascript">
+
+	$(document).ready(function () {
+		$("#uploadOntologyBtn").click(function() {
+				
+			$(this).button('loading');
+			$(this).setTimeout(function () {
+        		$(this).button('reset')
+        	}, 5000);
+
+			var fileData = new FormData($('#ontologyFile')[0]);
+			
+			var request = $.ajax({
+				url: '@{Administration.uploadOntology()}',
+				type: 'POST',
+				error: errorHandler = function() {
+					alert("Error while uploading new ontology file!");
+				},
+				data: fileData,
+				cache: false,
+				contentType: false,
+				processData: false
+			});
+                   	
+			var request = $.ajax({
+							type: "POST",
+							url: "@{Application.saveReport()}",
+							contentType: "application/json; charset=utf-8",
+							data: submitVals,
+							datatype: "json"
+						});
+
+			request.done(function(data, textStatus, jqXHR) {
+	    		// jqXHR is the XMLHttpRquest object
+				$(this).button('reset');
+			});
+
+		});
+
+	$('#ontologyFile').change(function(){
+            var file = this.files[0];
+            name = file.name;
+            $('#ontologyFileName').html(&{'urs.admin.uploadOntology.selectedFile',name});
+	});
+	
+	$("#saveSettingsBtn").click(function() {
+		
+		/* var obj = JSON.stringify(form.serializeArray()); */
+		var formVals = $('#ReportForm').serializeArray();
+		var jsonObj = {};
+
+		for (i in formVals) {
+			jsonObj[formVals[i].name] = formVals[i].value;
+		}
+
+		var submitVals = JSON.stringify({ "json": jsonObj });
+						
+		var request = $.ajax({
+						type: "POST",
+						url: "@{Application.saveReport()}",
+						contentType: "application/json; charset=utf-8",
+						data: submitVals,
+						datatype: "json"
+					});
+
+		request.done(function(data, textStatus, jqXHR) {
+	    	// xmlHttp is a XMLHttpRquest object
+    		//TODO: redirect using window.location.replace("link");
+    		window.location.replace("@{Application.index()}");
+		});
+	});
+
+});	
+
+</script>
+#{/set}

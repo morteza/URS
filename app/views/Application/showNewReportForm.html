@@ -1,0 +1,107 @@
+#{extends 'layout.html' /}
+#{set 'title'}&{'urs.report.newForm.title'} ${reportTitle}#{/set}
+
+<div class="page-header">
+	<h1>${reportTitle}</h1>
+	<p>${reportDescription}</p>
+</div>
+<div class="row">
+	#{form @Application.saveReport() , class:'form-vertical span8 offset2', method:'POST', id:'ReportForm', enctype:'multipart/form-data' }
+		<div class="control-group">
+			<div class="controls">
+				${strReportFields.raw()}
+				<input type="hidden" name="ReportClassName" value="${reportClassName}" />
+			</div>
+		</div>
+		<div class="form-actions">
+			<div class="controls">		
+			<button type="button" class="btn btn-primary" name="submit" id="submit" data-loading-text="&{'urs.report.submitButtonLoading'}">&{'urs.report.submitButton'}</button>
+			<a class="btn" href="@{Application.listReportTypes}" id="back">&{'urs.returnBtn'}</a>
+			</div>
+		</div>
+	#{/form}
+</div>
+
+#{set 'moreStyles'}
+    <link href="@{'/public/css/datepicker.fa.css'}" rel="stylesheet" media="screen">
+    <link href="@{'/public/css/timepicker.css'}" rel="stylesheet" media="screen">
+#{/set}
+
+#{set 'moreScripts'}
+    <script src="@{'/public/js/bootstrap-datepicker.fa.js'}"></script>
+    <script src="@{'/public/js/bootstrap-timepicker.js'}"></script>
+    <script src="@{'/public/js/html5placeholder.jquery.js'}"></script>
+    
+<script type="text/javascript">
+		$(document).ready(function () {
+			$('input[placeholder]').placeholder();
+			$('.timepicker').timepicker();
+			$('.datepicker').datepicker();
+			$('ul.tree li:last-child').addClass('last');
+			//$('ul.tree li:last-child').first().removeClass('last');
+			//$('ul.tree li:last-child').first().addClass('root');
+				
+			$(".tree li a").click( function(event) {
+			    event.stopPropagation();
+                event.preventDefault();
+			
+            	//$(this).toggleClass('selected');
+				//if ($(this).hasClass('selected')) {
+            		var s = "#" + $(this).attr('data-target');
+            		$(s).prop('value', $(this).attr('data-value'));
+            		//TODO: only remove for this tree, not all trees
+            		// $(".tree li a").removeClass('selected');
+            		//$(".tree li a").css('color','');
+            		$(this).toggleClass('selected');
+            		//alert($(s).prop('value'));
+            		$(this).css('color','red');
+            		$(this).css('font-weight','bold');
+            		if ($(s).data('selected')) {
+            			$(s).data('selected').removeClass('selected');
+            			$(s).data('selected').css('color','');
+            			$(s).data('selected').css('font-weight','');            			        		
+            		}
+            		$(s).data('selected',$(this));
+            		$(".tree").jqxTree('collapseAll');
+            		//alert($(s).data('selected').attr('data-value'));
+				//}
+            });
+			
+        });
+    
+    
+	$("#submit").click(function() {
+		
+		/* var obj = JSON.stringify(form.serializeArray()); */
+		var formVals = $('#ReportForm').serializeArray();
+		var jsonObj = {};
+		for (i in formVals) {
+			jsonObj[formVals[i].name] = formVals[i].value;
+		}
+
+		var submitVals = JSON.stringify({ "json": jsonObj });
+		/* alert(submitVals); */
+		
+		$(this).button('loading');
+		setTimeout(function () {
+        	$(this).button('reset')
+        }, 5000);
+		
+		var request = $.ajax({
+						type: "POST",
+						url: "@{Application.saveReport()}",
+						contentType: "application/json; charset=utf-8",
+						data: submitVals,
+						datatype: "json"
+					});
+		
+		request.done(function(data, textStatus, jqXHR) {
+	    	// jqXHR is the XMLHttpRquest object
+    		//redirect to the index page
+    		window.location.replace("@{Application.index()}");
+		});
+	});
+
+	
+</script>
+#{/set}

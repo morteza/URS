@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fa" lang="fa">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset="utf-8"/>
+	<title>&{'urs.setup.title'}</title>		
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Styles -->
+    <link href="@{'/public/css/bootstrap-rtl.min.css'}" rel="stylesheet">
+    <link href="@{'/public/css/bootstrap-responsive-rtl.min.css'}" rel="stylesheet">
+    <link href="@{'/public/css/main.css'}" rel="stylesheet" media="screen">
+	#{get 'moreStyles' /}
+	
+	<link rel="shortcut icon" type="image/png" href="@{'/public/ico/favicon.ico'}">
+
+    <!-- IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="container">
+    <br/>
+	    #{if flash.success}
+	<div class="row">
+		<div class="alert row alert-success alert-block span4 offset4">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
+			<h4 class="alert-heading"></h4>
+			<p style="text-align:center">${flash.success}</p>
+		</div>
+	</div>
+	#{/if}
+	#{if flash.error}
+	<div class="row">
+		<div class="alert row alert-error alert-block span4 offset4">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
+			<h4 class="alert-heading"></h4>
+			<p style="text-align:center">${flash.error}</p>
+		</div>
+	</div>
+	#{/if}
+        #{doLayout /}
+      <hr>
+      <footer>
+      	<p style="text-align:center">
+		<small>
+			#{if !controllers.Secure.Security.invoke("check", "administrator")}
+			<a href="@{Help.index()}">&{'urs.help.link'}</a>
+			#{/if}
+			#{secure.check "administrator"}
+			<a href="@{Help.index()}">&{'urs.help.link'}</a>
+			#{/secure.check}
+		</small>
+		</p>
+        <p style="text-align:center"><small>&{'copyrightNotice'}</small></p>
+    </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Javascripts ================================================== -->
+	<script src="@{'/public/js/jquery.min.js'}" type="text/javascript" charset="utf-8"></script>
+    <script src="@{'/public/js/bootstrap.js'}"></script>
+  	#{get 'moreScripts' /}
+  </body>
+</html>

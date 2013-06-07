@@ -1,0 +1,58 @@
+#{extends 'layout.html' /}
+#{set title:messages.get("urs.admin.userManagement.userProfile.header") /}
+
+<div class="page-header">
+	<h1>&{'urs.admin.userManagement.userProfile.header'} <em>'${user.name}'</em></h2>
+</div>
+#{if flash.success}
+<div class="row">
+	<div class="alert row alert-success alert-block span4 offset4">
+		<a class="close" data-dismiss="alert" href="#">&times;</a>
+		<h4 class="alert-heading"></h4>
+		<p style="text-align:center">${flash.success}</p>
+	</div>
+</div>
+#{/if}
+#{if flash.error}
+<div class="row">
+	<div class="alert row alert-error alert-block span4 offset4">
+		<a class="close" data-dismiss="alert" href="#">&times;</a>
+		<h4 class="alert-heading"></h4>
+		<p style="text-align:center">${flash.error}</p>
+	</div>
+</div>
+#{/if}
+      <div class="row">
+        <div class="span8 offset2">
+				<table class="table">
+				</tr>
+					<td>
+			            <strong>&{'urs.admin.userManagement.newUser.name'}</strong>
+					</td>
+					<td>
+					            <span>${user.name}</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					    <strong>&{'urs.admin.userManagement.newUser.email'}</strong>
+					</td>
+					<td> 
+							<span><code>${user.email}</code></span>
+					</td>
+					#{if user.isAdmin}
+				<tr>
+					<td colspan="2">
+						<span class="label label-info">&{'urs.index.info'}</span>
+					    این حساب کاربری به امکانات مدیریتی دسترسی دارد. برای اطلاعات بیشتر به <a href="@{Help.showPage('admin')}">راهنمای مدیریت سامانه</a> مراجعه نمایید.
+					</td>
+				</tr>
+					#{/if}
+				</table>
+				<div class="form-actions">
+					<a href="@{Administration.editUserPage(user.id)}" class="btn btn-primary">&{'urs.admin.userManagement.editUser'}</a>
+					<a href="@{Administration.confirmDeleteUser(user.id)}" class="btn btn-danger">&{'urs.admin.userManagement.deleteUser'}</a>
+					<a href="@{Administration.listAllUsers}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+				</div>
+        </div><!--/span-->
+      </div><!--/row-->

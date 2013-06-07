@@ -1,0 +1,35 @@
+	ul.tree, ul.tree ul {
+     list-style-type: none;
+     background: url('../img/vline.png') repeat-y;
+     background-position: right;
+     margin: 0;
+	 padding: 0;
+	 direction:rtl;
+   }
+   
+   ul.tree ul {
+     margin-right: 10px;
+   }
+
+   ul.tree li {
+     margin: 0;
+     padding: 0 12px;
+     line-height: 20px;
+     background: url('../img/node.png') no-repeat;
+     background-position: top right;
+     color: #369;
+   }
+
+   ul.tree li.last {
+     background: #fff url('../img/lastnode.png') no-repeat;
+     background-position: top right;
+     margin: 0;
+     padding: 0 12px;
+   }
+   
+   ul.tree li.root {
+     background: #fff url('../img/rootnode.png') no-repeat;
+     background-position: top right;
+     margin: 0;
+     padding: 0 12px;   	
+   }

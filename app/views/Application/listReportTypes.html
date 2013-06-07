@@ -1,0 +1,18 @@
+#{extends 'layout.html' /}
+#{set 'title'}&{'urs.report.listReportTypes.title'}#{/set}
+
+<div class="page-header">
+<p>&{'urs.report.listReportTypes.header.comment'}</p>
+</div>
+
+<div class="row offset1">
+	#{if types}
+		#{list items:0..size-1, as:'i'}
+			<div class="span4">
+				<h2>${titles[i]}</h2>
+				<p>${descriptions[i]}</p>
+				<p>#{a @Application.showNewReportForm(types[i]), class:"btn btn-large btn-primary"}&{'urs.report.listReportTypes.reportBtn'}#{/a}</p>
+			</div>
+		#{/list}
+	#{/if}
+</div>

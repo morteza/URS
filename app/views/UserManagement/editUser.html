@@ -1,0 +1,85 @@
+#{extends 'layout.html' /}
+#{set title:messages.get("urs.admin.userManagement.editUser.header") /}
+
+<div class="page-header">
+	<h1>&{'urs.admin.userManagement.editUser.header'}</h2>
+</div>
+      <div class="row">
+        <div class="span8 offset2">
+			#{form @Administration.updateUser()}
+				<input type="hidden" name="id" value="${user.id}">
+				<table class="table">
+				</tr>
+					<td>
+			            &{'urs.admin.userManagement.newUser.name'}
+					</td>
+					<td>
+					    #{field 'user.fullname'}
+					            <input type="text" name="name" class="rtl-input span3" value="${user.name}">
+					    #{/field}
+					</td>
+				</tr>
+				<tr>
+					<td>
+					    &{'urs.admin.userManagement.newUser.email'}
+					</td>
+					<td> 
+					    #{field 'user.email'}
+						<div class="control-group #{ifError 'user.email'}error#{/ifError}">
+						  <div class="controls">
+							<input type="text" name="email" class="ltr-input span3" value="${user.email}">
+						    <span class="help-inline error">${field.error}</span>
+						  </div>
+						</div>
+					    #{/field}
+					</td>
+				</tr>
+				<tr>
+					<td>
+			            &{'urs.admin.userManagement.editUser.password'}
+					</td>
+					<td>
+					#{field 'password'}
+						<div class="control-group #{ifError 'password'}error#{/ifError}">
+						  <div class="controls">
+				            <input type="password" name="password" class="ltr-input span3">
+						    <span class="help-inline error">${field.error}</span>
+						  </div>
+						</div>
+		            #{/field}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						&{'urs.admin.userManagement.editUser.verifyPassword'}
+					</td>
+					<td>
+					    #{field 'verifyPassword'}
+						<div class="control-group #{ifError 'verifyPassword'}error#{/ifError}">
+						  <div class="controls">
+				            <input type="password" name="verifyPassword" class="ltr-input span3">
+						    <span class="help-inline error">${field.error}</span>
+						  </div>
+						</div>
+					    #{/field}
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<label class="checkbox">
+				    	#{field 'user.isAdmin'}
+				    		<input type="checkbox" name="isAdmin" #{if user.isAdmin}checked #{/if}/>
+					    #{/field}
+					    <span style="cursor: pointer;">&{'urs.admin.userManagement.newUser.isAdmin'}</span>
+			    		
+			    		</label>
+					</td>
+				</tr>
+				</table>
+				<div class="form-actions">
+					<input type="submit" class="btn btn-primary" value="&{'urs.admin.userManagement.editUser.submit'}">
+					<a href="@{Administration.showUserProfile(user.id)}" id="saveSettingsBtn" class="btn">&{'urs.returnBtn'}</a>
+				</div>
+			#{/form} 
+        </div><!--/span-->
+      </div><!--/row-->
